@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    html {
+      height: 100%;
+      background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    }
+    body {
+      font-family: 'Montserrat', Arial, Verdana;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      color: #fff;
+      background: url('/mnt/data/images (1).jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)); /* Match background */
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background 0.3s;
+      margin-left: 10px;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10%;
+      position: relative;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .button {
+      background: #00aaff;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button:hover {
+      background: #007acc;
+      transform: translateY(-2px);
+    }
+
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .arrow {
+      margin-left: 10px;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .button:hover .arrow {
+      color: #007acc;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="pre">Predict</a>
+    <a href="#">Profile</a>
+  </div>
+  <div class="container">
+    <div class="left">
+      <h1>Chronic Kidney Disease</h1>
+      <p>Chronic kidney disease (CKD) is a condition characterized by a gradual loss of kidney function over time. CKD can lead to end-stage kidney disease, which is fatal without artificial filtering (dialysis) or a kidney transplant. Early detection and treatment can often keep chronic kidney disease from getting worse. When kidney disease progresses, it may eventually lead to kidney failure, which requires dialysis or a kidney transplant to maintain life.</p>
+    </div>
+    <div class="right">
+      <button class="button" onclick="window.location.href='pre'">
+        Check Now
+      </button>
+      <span class="arrow">&rarr;</span>
+    </div>
+  </div>
+</body>
+</html>

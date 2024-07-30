@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CKD Assessment Result</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <style>
+    /* Custom Font */
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    /* Basic Reset */
+    * { margin: 0; padding: 0; }
+
+    html {
+      height: 100%;
+      background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    }
+
+    body {
+      font-family: 'Montserrat', Arial, Verdana;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #2C3E50;
+    }
+
+    .container {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .result-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .result-text {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      background: #27AE60;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .button:hover {
+      background: #219150;
+      transform: translateY(-2px);
+    }
+
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="result-title">CKD Assessment Result</h2>
+    <p class="result-text">
+      {% if prediction == 1 %}
+        You have Chronic Kidney Disease. {{ risk_factor }}.
+        Do you want to consult a doctor?
+      {% else %}
+        You don't have Chronic Kidney Disease but {{ risk_factor }} , Do you want to consult a doctor?
+      {% endif %}
+    </p>
+    <button class="button" onclick="window.location.href='/doctor'">Consult a Doctor</button>
+  </div>
+</body>
+</html>
